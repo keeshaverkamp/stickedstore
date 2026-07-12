@@ -1,13 +1,221 @@
 <!DOCTYPE html>
-  <html lang="nl">
-  <head>
-    <meta charset="UTF-8">
-    <title>Sticked Store</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <h1>Welkom bij Sticked Store</h1>
-    <p>Deze pagina wordt gehost via GitHub Pages.</p>
-  </body>
-  </html>
-  
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sticked · Van spelers, voor spelers</title>
+<meta name="description" content="Sticked is de marktplaats voor gecheckte tweedehands hockeysticks. Van spelers, voor spelers. Koop, verkoop en start compleet voor 35 euro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --warmwit:#FAF9F5;--creme:#F0EEE6;--terra:#D97757;--terra-donker:#B85C3E;
+  --donker:#3D3929;--grijs:#8A8578;--lijn:#E4E1D6;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Instrument Sans',sans-serif;background:var(--warmwit);color:var(--donker);line-height:1.65}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.15}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+.hero{text-align:center;padding:88px 24px 64px}
+.hero svg{width:150px;height:150px;margin-bottom:28px}
+.hero h1{font-size:clamp(36px,6vw,58px);font-weight:800;letter-spacing:-1px}
+.hero h1 em{font-style:normal;color:var(--terra)}
+.hero .sub{margin:20px auto 0;font-size:19px;color:var(--grijs);max-width:52ch}
+.hero .acties{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.knop{display:inline-block;padding:13px 28px;border-radius:999px;font-weight:600;font-size:15px;transition:all .2s}
+.knop-terra{background:var(--terra);color:#fff}
+.knop-terra:hover{background:var(--terra-donker)}
+.knop-licht{background:#fff;border:1px solid var(--lijn);color:var(--donker)}
+.knop-licht:hover{border-color:var(--donker)}
+
+.strook{background:var(--donker);color:var(--creme);overflow:hidden;padding:12px 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:14px;letter-spacing:2px;white-space:nowrap;text-align:center}
+
+section{padding:72px 0}
+.kop{text-align:center;margin-bottom:44px}
+.kop .eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);font-weight:600}
+.kop h2{font-size:clamp(28px,4vw,38px);font-weight:800;margin-top:10px}
+.kop p{margin:14px auto 0;color:var(--grijs);max-width:56ch}
+
+.drie{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tegel{background:#fff;border:1px solid var(--lijn);border-radius:16px;padding:30px 26px}
+.tegel .nr{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:15px;color:#fff;background:var(--terra);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.tegel h3{font-size:19px;font-weight:600;margin-bottom:8px}
+.tegel p{font-size:15px;color:var(--grijs)}
+
+.check-blok{background:var(--creme);border-radius:24px;padding:56px 40px;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+.check-blok svg{width:120px;height:120px}
+.check-blok h2{font-size:30px;font-weight:800}
+.check-blok p{margin-top:12px;color:var(--grijs);max-width:58ch}
+.check-blok .quote{margin-top:18px;border-left:3px solid var(--terra);padding-left:16px;font-style:italic;color:var(--donker)}
+
+.starter{background:var(--donker);color:var(--warmwit);border-radius:24px;padding:56px 40px;text-align:center}
+.starter .eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);font-weight:600}
+.starter h2{font-size:clamp(28px,4vw,38px);font-weight:800;margin-top:10px}
+.starter .bedrag{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:72px;color:var(--terra);margin:18px 0 4px;line-height:1}
+.starter p{color:#C9C5B8;max-width:54ch;margin:10px auto 0}
+.starter .items{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.starter .item{background:rgba(250,249,245,.08);border:1px solid rgba(250,249,245,.18);border-radius:999px;padding:9px 20px;font-size:14px}
+.starter .partners{margin-top:22px;font-size:13px;color:#8A8578}
+
+.app-blok{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.app-blok h2{font-size:30px;font-weight:800}
+.app-blok p{margin-top:14px;color:var(--grijs)}
+.app-blok ul{margin-top:16px;list-style:none;display:flex;flex-direction:column;gap:10px}
+.app-blok li{padding-left:26px;position:relative;font-size:15px}
+.app-blok li::before{content:"";position:absolute;left:0;top:7px;width:12px;height:12px;border-radius:50%;background:var(--terra)}
+.telefoon{background:var(--creme);border-radius:24px;padding:40px;display:flex;justify-content:center}
+.telefoon .scherm{width:200px;background:#fff;border:1px solid var(--lijn);border-radius:26px;padding:20px 16px;text-align:center}
+.telefoon .scherm svg{width:64px;height:64px;margin:12px 0}
+.telefoon .scherm .naam{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:2px;font-size:16px}
+.telefoon .scherm .tag{font-size:12px;color:var(--grijs);margin-top:4px}
+.telefoon .scherm .binnenkort{margin-top:16px;background:var(--terra);color:#fff;font-size:12px;font-weight:600;padding:7px 14px;border-radius:999px;display:inline-block}
+
+.cta-eind{text-align:center;padding:80px 24px}
+.cta-eind h2{font-size:clamp(28px,4vw,38px);font-weight:800}
+.cta-eind p{margin:14px auto 0;color:var(--grijs);max-width:50ch}
+
+footer{border-top:1px solid var(--lijn)}
+.voet{max-width:960px;margin:0 auto;padding:32px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--grijs);font-size:14px}
+
+@media(max-width:760px){
+  .drie{grid-template-columns:1fr}
+  .check-blok{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .app-blok{grid-template-columns:1fr}
+  section{padding:52px 0}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <svg viewBox="0 0 200 200" role="img" aria-label="Sticked logo">
+    <circle cx="100" cy="100" r="92" fill="none" stroke="#D97757" stroke-width="2.5"/>
+    <g transform="translate(100,96) rotate(22)"><path d="M 0 -62 Q -3 -13 -1 31 Q 0 46 -12 51 Q -24 56 -29 45" fill="none" stroke="#3D3929" stroke-width="8" stroke-linecap="round"/></g>
+    <g transform="translate(100,96) rotate(-22) scale(-1,1)"><path d="M 0 -62 Q -3 -13 -1 31 Q 0 46 -12 51 Q -24 56 -29 45" fill="none" stroke="#D97757" stroke-width="8" stroke-linecap="round"/></g>
+    <circle cx="100" cy="158" r="6" fill="#D97757"/>
+  </svg>
+  <span style="display:inline-block;background:#F0EEE6;border:1px solid #E4E1D6;color:#B85C3E;font-size:13px;font-weight:600;letter-spacing:2px;padding:7px 18px;border-radius:999px;margin-bottom:24px">BINNENKORT LIVE</span>
+  <h1>Van spelers,<br><em>voor spelers.</em></h1>
+  <p class="sub">Sticked wordt d&eacute; marktplaats voor tweedehands hockeysticks, gecheckt door hockeyers. Eerlijk beoordeeld, eerlijk geprijsd. We bouwen er hard aan.</p>
+  <div class="acties">
+    <a href="https://instagram.com/sticked.store" class="knop knop-terra">Volg @sticked.store op Instagram</a>
+  </div>
+</div>
+
+<div class="strook" aria-hidden="true">GECHECKT DOOR HOCKEYERS · EERLIJKE PRIJZEN · ELKE STICK EEN TWEEDE SEIZOEN · GECHECKT DOOR HOCKEYERS · EERLIJKE PRIJZEN · ELKE STICK EEN TWEEDE SEIZOEN</div>
+
+<section id="hoe">
+  <div class="wrap">
+    <div class="kop">
+      <span class="eyebrow">Het concept</span>
+      <h2>Goede sticks verdienen een tweede leven</h2>
+      <p>Jeugdhockeyers groeien snel uit hun stick, terwijl die vaak nog seizoenen mee kan. Sticked brengt die sticks straks bij spelers die er blij van worden. Zo gaat het werken:</p>
+    </div>
+    <div class="drie">
+      <div class="tegel">
+        <div class="nr">1</div>
+        <h3>Bied je stick aan</h3>
+        <p>Maak een foto, vul de specs in en geef eerlijk de staat aan. In drie minuten staat je stick te koop.</p>
+      </div>
+      <div class="tegel">
+        <div class="nr">2</div>
+        <h3>Wij checken</h3>
+        <p>Elke stick wordt beoordeeld voordat hij online gaat. Zo weet een koper precies wat hij krijgt.</p>
+      </div>
+      <div class="tegel">
+        <div class="nr">3</div>
+        <h3>Van speler tot speler</h3>
+        <p>Koper en verkoper regelen de overdracht onderling. Geen tussenhandel, wel een eerlijke prijs voor allebei.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="check-blok">
+      <svg viewBox="0 0 200 200" aria-hidden="true">
+        <circle cx="100" cy="100" r="92" fill="none" stroke="#D97757" stroke-width="2.5"/>
+        <g transform="translate(100,96) rotate(22)"><path d="M 0 -62 Q -3 -13 -1 31 Q 0 46 -12 51 Q -24 56 -29 45" fill="none" stroke="#3D3929" stroke-width="8" stroke-linecap="round"/></g>
+        <g transform="translate(100,96) rotate(-22) scale(-1,1)"><path d="M 0 -62 Q -3 -13 -1 31 Q 0 46 -12 51 Q -24 56 -29 45" fill="none" stroke="#D97757" stroke-width="8" stroke-linecap="round"/></g>
+        <circle cx="100" cy="158" r="6" fill="#D97757"/>
+      </svg>
+      <div>
+        <h2>Siem's check</h2>
+        <p>Sticked is gestart door Siem, jeugdhockeyer op topniveau. Hij beoordeelt sticks in het aanbod en vertelt eerlijk voor wie een stick geschikt is: welk niveau, welke speelstijl, welke positie.</p>
+        <p class="quote">"Een goede stick hoeft niet nieuw te zijn. Hij moet bij je passen."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="starter">
+      <span class="eyebrow">Tweedehands sticks, gloednieuwe hockeyers</span>
+      <h2>Compleet het veld op voor</h2>
+      <div class="bedrag">&euro; 35</div>
+      <p>Met de Sticked starterset kan elk kind laagdrempelig starten met hockey: een gecheckte tweedehands stick, gratis scheenbeschermers en een bitje, en simpele hockeyschoenen.</p>
+      <div class="items">
+        <span class="item">Tweedehands kinderstick</span>
+        <span class="item">Scheenbeschermers + bitje</span>
+        <span class="item">Hockeyschoenen</span>
+      </div>
+      <p class="partners">Starterset in ontwikkeling met partners uit de hockeywereld</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="app-blok">
+      <div>
+        <span class="eyebrow" style="font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);font-weight:600">Binnenkort</span>
+        <h2 style="margin-top:10px">De Sticked app</h2>
+        <p>We bouwen aan een app waarmee kopen en verkopen nog makkelijker wordt. Installeer hem straks direct vanaf de site op je telefoon, zonder app store.</p>
+        <ul>
+          <li>Zet je stick in drie minuten te koop</li>
+          <li>Slim prijsadvies op basis van merk, model en staat</li>
+          <li>Veilig chatten tussen koper en verkoper</li>
+          <li>Bericht als jouw maat en bow binnenkomt</li>
+        </ul>
+      </div>
+      <div class="telefoon">
+        <div class="scherm">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <circle cx="100" cy="100" r="92" fill="none" stroke="#D97757" stroke-width="3"/>
+            <g transform="translate(100,96) rotate(22)"><path d="M 0 -62 Q -3 -13 -1 31 Q 0 46 -12 51 Q -24 56 -29 45" fill="none" stroke="#3D3929" stroke-width="8" stroke-linecap="round"/></g>
+            <g transform="translate(100,96) rotate(-22) scale(-1,1)"><path d="M 0 -62 Q -3 -13 -1 31 Q 0 46 -12 51 Q -24 56 -29 45" fill="none" stroke="#D97757" stroke-width="8" stroke-linecap="round"/></g>
+            <circle cx="100" cy="158" r="6" fill="#D97757"/>
+          </svg>
+          <div class="naam">STICKED</div>
+          <div class="tag">Van spelers,<br>voor spelers</div>
+          <span class="binnenkort">Binnenkort</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-eind">
+  <h2>Doe mee vanaf het begin</h2>
+  <p>Volg Sticked op Instagram en zie de lancering, het eerste aanbod en de verhalen achter de sticks als eerste voorbijkomen.</p>
+  <div class="acties" style="margin-top:30px;display:flex;justify-content:center">
+    <a href="https://instagram.com/sticked.store" class="knop knop-terra">Volg @sticked.store op Instagram</a>
+  </div>
+</div>
+
+<footer>
+  <div class="voet">
+    <span>© 2026 Sticked · sticked.store</span>
+    <span>Gestart door Siem, gebouwd voor hockeyers</span>
+  </div>
+</footer>
+
+</body>
+</html>
