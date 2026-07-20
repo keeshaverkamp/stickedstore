@@ -1,4 +1,3 @@
-<style>
 :root{
   --warmwit:#FAF9F5;--creme:#F0EEE6;--terra:#D97757;--terra-donker:#B85C3E;
   --donker:#3D3929;--grijs:#8A8578;--lijn:#E4E1D6;
@@ -78,4 +77,3 @@ footer{border-top:1px solid var(--lijn)}
   section{padding:52px 0}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
-</style>
