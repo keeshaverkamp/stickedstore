@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sticked · Van spelers, voor spelers</title>
+<meta name="description" content="Sticked is de etalage voor gecheckte tweedehands hockeysticks. Van spelers, voor spelers. Reageren gaat via Instagram.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="#" class="logo">
+      <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="#D97757" stroke-width="3"/>
+        <g transform="translate(50,48) rotate(22)"><path d="M 0 -30 Q -1.5 -6 -.5 15 Q 0 23 -6 26 Q -12 28 -15 22" fill="none" stroke="#3D3929" stroke-width="5" stroke-linecap="round"/></g>
+        <g transform="translate(50,48) rotate(-22) scale(-1,1)"><path d="M 0 -30 Q -1.5 -6 -.5 15 Q 0 23 -6 26 Q -12 28 -15 22" fill="none" stroke="#D97757" stroke-width="5" stroke-linecap="round"/></g>
+        <circle cx="50" cy="80" r="4" fill="#D97757"/>
+      </svg>
+      STICKED
+    </a>
+    <div class="nav-links">
+      <a href="#aanbod">Aanbod</a>
+      <a href="#hoe">Zo werkt het</a>
+      <a href="#over">Over Sticked</a>
+    </div>
+    <a href="https://instagram.com/sticked.store" class="cta" target="_blank" rel="noopener">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="#fff" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff"/></svg>
+      Volg ons
+    </a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h1>Van spelers,<br><em>voor spelers.</em></h1>
+    <p>Goede sticks verdienen een tweede leven. Bekijk het aanbod van gecheckte tweedehands hockeysticks en reageer via Instagram.</p>
+    <div class="hero-acties">
+      <a href="#aanbod" class="knop knop-primair">Bekijk het aanbod</a>
+      <a href="https://instagram.com/sticked.store" class="knop knop-licht" target="_blank" rel="noopener">Volg @sticked.store</a>
+    </div>
+  </div>
+  <div class="hero-badge">
+    <svg width="230" height="230" viewBox="0 0 200 200" role="img" aria-label="Sticked logo">
+      <circle cx="100" cy="100" r="92" fill="none" stroke="#D97757" stroke-width="2.5"/>
+      <g transform="translate(100,96) rotate(22)"><path d="M 0 -62 Q -3 -13 -1 31 Q 0 46 -12 51 Q -24 56 -29 45" fill="none" stroke="#3D3929" stroke-width="8" stroke-linecap="round"/></g>
+      <g transform="translate(100,96) rotate(-22) scale(-1,1)"><path d="M 0 -62 Q -3 -13 -1 31 Q 0 46 -12 51 Q -24 56 -29 45" fill="none" stroke="#D97757" stroke-width="8" stroke-linecap="round"/></g>
+      <circle cx="100" cy="158" r="6" fill="#D97757"/>
+    </svg>
+  </div>
+</div>
+
+<div class="strook" aria-hidden="true">
+  <span>GECHECKT DOOR HOCKEYERS · EERLIJKE PRIJZEN · ELKE STICK EEN TWEEDE SEIZOEN · GECHECKT DOOR HOCKEYERS · EERLIJKE PRIJZEN · ELKE STICK EEN TWEEDE SEIZOEN</span>
+</div>
+
+<section id="aanbod">
+  <div class="sectie-kop">
+    <h2>Het aanbod</h2>
+    <p><span id="aantal"></span> sticks te koop</p>
+  </div>
+  <div class="filters">
+    <select id="f-merk" aria-label="Filter op merk"><option value="">Alle merken</option></select>
+    <select id="f-lengte" aria-label="Filter op lengte"><option value="">Alle lengtes</option></select>
+    <select id="f-prijs" aria-label="Filter op prijs">
+      <option value="">Alle prijzen</option>
+      <option value="0-50">Tot &euro; 50</option>
+      <option value="50-100">&euro; 50 tot &euro; 100</option>
+      <option value="100-999">&euro; 100 en meer</option>
+    </select>
+  </div>
+  <div class="grid" id="grid">
+    <div class="laad-melding">Aanbod laden...</div>
+  </div>
+</section>
+
+<div class="hoe" id="hoe">
+  <div class="hoe-inner">
+    <h2>Zo werkt het</h2>
+    <p class="sub">Kopen bij Sticked gaat in drie simpele stappen</p>
+    <div class="stappen">
+      <div class="stap">
+        <div class="stap-nr">1</div>
+        <h3>Vind je stick</h3>
+        <p>Blader door het aanbod en filter op merk, lengte en prijs. Elke stick is gecheckt en eerlijk beoordeeld.</p>
+      </div>
+      <div class="stap">
+        <div class="stap-nr">2</div>
+        <h3>Reageer via Instagram</h3>
+        <p>Klik op "Reageer via Instagram" bij de stick die je wilt. Je komt direct bij ons uit voor je vraag of bod.</p>
+      </div>
+      <div class="stap">
+        <div class="stap-nr">3</div>
+        <h3>Van speler tot speler</h3>
+        <p>We regelen de overdracht onderling. Geen tussenhandel, wel een eerlijke prijs voor allebei.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="over">
+  <div class="sectie-kop"><h2>Over Sticked</h2></div>
+  <p style="max-width:62ch;color:var(--grijs)">Sticked is gestart door Siem, jeugdhockeyer op topniveau. Goede sticks zijn duur en jeugdspelers groeien er snel uit of doorheen. Zonde, want de meeste sticks kunnen makkelijk nog een paar seizoenen mee. Op Sticked vind je tweedehands sticks die eerlijk beoordeeld zijn, zodat je precies weet wat je koopt. Van spelers, voor spelers.</p>
+</section>
+
+<footer>
+  <div class="voet">
+    <span>© 2026 Sticked · sticked.store</span>
+    <span>Reageren en vragen? Via <a href="https://instagram.com/sticked.store" target="_blank" rel="noopener">@sticked.store</a> op Instagram</span>
+  </div>
+</footer>
+
+<script>
+/* Het Instagram-account waar reacties heen gaan. */
+const INSTA = "https://instagram.com/sticked.store";
+
+/* Het aanbod komt uit sticks.csv in dezelfde map als deze pagina.
+   Siem beheert dat bestand, hier hoeft niets aangepast te worden. */
+const CSV_BESTAND = "sticks.csv";
+
+const stickIcon = (fill) => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M 12 3 Q 11 10 11.5 15 Q 12 18.5 9 19.5 Q 6 20.3 4.8 18" fill="none" stroke="${fill}" stroke-width="2.6" stroke-linecap="round"/></svg>`;
+const instaIcon = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="#fff" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff"/></svg>`;
+
+const grid = document.getElementById('grid');
+const fMerk = document.getElementById('f-merk');
+const fLengte = document.getElementById('f-lengte');
+const fPrijs = document.getElementById('f-prijs');
+
+let sticks = [];
+
+/* "ja" / "waar" / "1" tellen als ja, de rest als nee. */
+function jaNee(waarde){
+  const w = String(waarde || '').trim().toLowerCase();
+  return w === 'ja' || w === 'waar' || w === 'true' || w === '1' || w === 'x';
+}
+
+function staatIcons(n){
+  let html = '<span class="staat" title="Staat: '+n+' van 5" aria-label="Staat '+n+' van 5">';
+  for(let i=1;i<=5;i++) html += stickIcon(i<=n ? '#D97757' : '#E4E1D6');
+  return html + '</span>';
+}
+
+function vulFilters(){
+  const merken = [...new Set(sticks.map(s=>s.merk).filter(Boolean))].sort();
+  const lengtes = [...new Set(sticks.map(s=>s.lengte).filter(Boolean))].sort();
+  fMerk.innerHTML = '<option value="">Alle merken</option>' + merken.map(m=>`<option>${m}</option>`).join('');
+  fLengte.innerHTML = '<option value="">Alle lengtes</option>' + lengtes.map(l=>`<option>${l}</option>`).join('');
+}
+
+function render(){
+  const m = fMerk.value, l = fLengte.value, p = fPrijs.value;
+  let lijst = sticks.filter(s =>
+    (!m || s.merk===m) && (!l || s.lengte===l) &&
+    (!p || (s.prijs >= +p.split('-')[0] && s.prijs < +p.split('-')[1]))
+  );
+  document.getElementById('aantal').textContent = lijst.filter(s=>!s.verkocht).length;
+  if(!lijst.length){
+    grid.innerHTML = '<div class="leeg-melding">Geen sticks gevonden met deze filters. Probeer het iets breder.</div>';
+    return;
+  }
+  grid.innerHTML = lijst.map((s, idx)=>{
+    let fotoBlok;
+    if(s.fotos.length){
+      const imgs = s.fotos.map((f,i)=>`<img src="${f}" alt="${s.merk} ${s.model}, foto ${i+1}" class="${i===0?'actief':''}" data-kaart="${idx}" data-foto="${i}">`).join('');
+      const nav = s.fotos.length > 1 ? `
+        <button class="foto-pijl links" aria-label="Vorige foto" onclick="wisselFoto(event, ${idx}, -1)">&#8249;</button>
+        <button class="foto-pijl rechts" aria-label="Volgende foto" onclick="wisselFoto(event, ${idx}, 1)">&#8250;</button>
+        <div class="foto-stippen">${s.fotos.map((_,i)=>`<span class="foto-stip ${i===0?'actief':''}" data-kaart="${idx}" data-stip="${i}"></span>`).join('')}</div>` : '';
+      fotoBlok = imgs + nav;
+    } else {
+      fotoBlok = `<svg width="70" height="120" viewBox="0 0 60 110" aria-hidden="true"><path d="M 30 8 Q 27 45 29 75 Q 30 88 20 92 Q 10 95 6 86" fill="none" stroke="#D9D5C8" stroke-width="7" stroke-linecap="round"/></svg>`;
+    }
+    return `
+    <article class="kaart ${s.verkocht?'is-verkocht':''}">
+      <div class="kaart-foto">
+        ${fotoBlok}
+        ${s.check && !s.verkocht ? '<span class="check-badge">SIEM\u2019S CHECK</span>' : ''}
+        ${s.verkocht ? '<span class="verkocht-badge">VERKOCHT</span>' : ''}
+      </div>
+      <div class="kaart-body">
+        <span class="kaart-merk">${s.merk}</span>
+        <span class="kaart-titel">${s.model}</span>
+        <div class="specs">
+          ${s.lengte ? `<span class="spec">${s.lengte}</span>` : ''}
+          ${s.bow ? `<span class="spec">${s.bow}</span>` : ''}
+        </div>
+        ${s.oordeel ? `<p class="oordeel">"${s.oordeel}"</p>` : ''}
+        <div class="kaart-voet">
+          <span class="prijs">&euro; ${s.prijs}</span>
+          ${staatIcons(s.staat)}
+        </div>
+        ${s.verkocht
+          ? `<span class="kaart-insta uit">Verkocht</span>`
+          : `<a class="kaart-insta" href="${INSTA}" target="_blank" rel="noopener" aria-label="Reageer op ${s.merk} ${s.model} via Instagram">${instaIcon} Reageer via Instagram</a>`}
+      </div>
+    </article>`;
+  }).join('');
+}
+
+/* Wisselt tussen de foto's van een kaart. */
+const actieveFoto = {};
+function wisselFoto(e, kaartId, richting){
+  e.preventDefault();
+  const imgs = document.querySelectorAll(`img[data-kaart="${kaartId}"]`);
+  const stippen = document.querySelectorAll(`span[data-kaart="${kaartId}"]`);
+  if(!imgs.length) return;
+  let huidig = actieveFoto[kaartId] || 0;
+  huidig = (huidig + richting + imgs.length) % imgs.length;
+  actieveFoto[kaartId] = huidig;
+  imgs.forEach((img,i)=>img.classList.toggle('actief', i===huidig));
+  stippen.forEach((st,i)=>st.classList.toggle('actief', i===huidig));
+}
+
+[fMerk,fLengte,fPrijs].forEach(el=>el.addEventListener('change',render));
+
+/* CSV inladen en omzetten naar sticks. */
+Papa.parse(CSV_BESTAND, {
+  download: true,
+  header: true,
+  skipEmptyLines: true,
+  complete: function(resultaat){
+    sticks = resultaat.data
+      .filter(r => (r.merk || '').trim() !== '')
+      .map(r => ({
+        merk: (r.merk||'').trim(),
+        model: (r.model||'').trim(),
+        lengte: (r.lengte||'').trim(),
+        bow: (r.bow||'').trim(),
+        prijs: parseInt(r.prijs, 10) || 0,
+        staat: parseInt(r.staat, 10) || 0,
+        oordeel: (r.oordeel||'').trim(),
+        check: jaNee(r.check),
+        verkocht: jaNee(r.verkocht),
+        fotos: [ (r.foto1||'').trim(), (r.foto2||'').trim(), (r.foto3||'').trim(), (r.foto4||'').trim(), (r.foto5||'').trim() ].filter(Boolean)
+      }));
+    vulFilters();
+    render();
+  },
+  error: function(){
+    grid.innerHTML = '<div class="leeg-melding">Het aanbod kon niet geladen worden. Probeer de pagina te verversen.</div>';
+  }
+});
+</script>
+</body>
+</html>
